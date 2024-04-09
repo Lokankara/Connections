@@ -1,0 +1,23 @@
+<header class="header">
+  <form class="search" [formGroup]="formGroup">
+    <app-logo></app-logo>
+    <input #searchInput
+           class="input-field-text"
+           type="text"
+           formControlName="searchInput"
+           autocomplete="off"
+           placeholder="Angular Podcast"
+    >
+    <app-settings-button (click)="pre.toggle()">
+    </app-settings-button>
+  </form>
+  <app-login-info></app-login-info>
+  <a routerLink="/favorite">
+    <img src="assets/svg/items/star.svg" alt="Star">
+  </a>
+</header>
+<app-filter-setting
+  [searchText]="searchText.value"
+  appHidden #pre="hiddenControl"
+>
+</app-filter-setting>

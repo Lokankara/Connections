@@ -1,0 +1,93 @@
+@import 'assets/css/variables';
+
+$border-size: 280px;
+$round: 5px;
+$content-size: 238px;
+
+.video-cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.group {
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.statistics {
+  top: 164px;
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+}
+
+.card {
+  position: relative;
+  width: $border-size;
+  height: 330px;
+  margin: 10px;
+  border-radius: $round;
+  text-align: right;
+  background: $card-bg-color;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+}
+
+.title {
+  width: $content-size;
+  height: 23px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: $dark-grey-color;
+  position: absolute;
+  top: 198px;
+  left: 10px;
+}
+
+.image {
+  width: $content-size;
+  height: 123px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.button-text-details {
+  border-radius: $round;
+  background: $main-button-color;
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  bottom: 20%;
+  right: 20%;
+  font-size: $text-font-size;
+  text-align: center;
+  line-height: $text-line-height;
+  color: $white-text-color;
+  border: none;
+  cursor: pointer;
+  top: $border-size;
+  left: 72px;
+  width: 130px;
+  height: 32px;
+  filter: drop-shadow(2px 0px 4px $main-button-color);
+}
+
+.viewed,
+.liked,
+.disliked,
+.comments {
+  font-size: 10px;
+  margin-left: 2px;
+  color: $black-text-color;
+}

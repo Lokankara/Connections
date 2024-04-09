@@ -1,0 +1,22 @@
+<div class="row-table">
+  <div class="col-4 py-3 px-0 shadow conversation-wrapper">
+    <table>
+      <ng-container *ngFor="let user of users | async">
+        <tr *ngIf="user">
+          <td>
+            <div class="box">
+              <img [src]="'https://picsum.photos/50/50/?random=' +
+                      (user.uid?.S)"
+                   alt="">
+              <div class="header-name"
+                   (click)="onSelectConversation(user.uid.S)">
+                <p>{{ user.name?.S }}</p>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </ng-container>
+    </table>
+  </div>
+  <app-message [currentUserName]="selectedUserId"></app-message>
+</div>
